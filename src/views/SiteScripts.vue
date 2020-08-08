@@ -41,6 +41,18 @@
           Options
         </button>
       </div>
+      <div class="diy">
+        <div class="special-remover">
+          <label class="switch">
+            <input type="checkbox" :disabled="true"/>
+            <span class="slider round" @click="diy = !diy"></span>
+          </label>
+          <span>Custom</span>
+        </div>
+        <button v-bind:class="{ off: true }" :disabled="true">
+          Coming Soon
+        </button>
+      </div>
     </div>
     <footer><Footer /></footer>
   </div>
@@ -62,6 +74,7 @@ export default {
       misc: true,
       bots: true,
       groups: true,
+      diy: true
     };
   },
 };
@@ -79,7 +92,7 @@ footer {
   background-color: var(--background-color);
   display: grid;
   grid-template-columns: 40px 1fr 1fr 40px;
-  grid-template-rows: 70px 60px 60px 60px;
+  grid-template-rows: 70px 60px 60px 60px 60px;
   background-size: cover;
   background-size: 100% 70%;
   background-position: left bottom;
@@ -93,7 +106,7 @@ h2 {
 }
 .groups,
 .misc,
-.bots {
+.bots, .diy {
   grid-column: 2/4;
   display: grid;
   grid-template-columns: 1fr 1fr;

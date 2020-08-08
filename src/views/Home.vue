@@ -7,16 +7,16 @@
         <div class="inside">
           <span>Welcome back,</span>
           <br />
-          <span>User#6969</span>
+          <span>User#0001</span>
         </div>
       </div>
       <div class="mid">
         <p>Renewal Date: dd/mm/yyyy</p>
       </div>
       <div class="bottom">
-        <button class="renew button">Renew</button>
-        <button class="cancel button">Cancel</button>
-        <button class="discord button">Discord</button>
+        <button class="renew button">+ Session</button>
+        <button class="cancel button">Deactivate</button>
+        <button class="discord button">Join Discord</button>
       </div>
     </div>
     <footer><Footer /></footer>

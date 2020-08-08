@@ -6,37 +6,9 @@
         ><button>Profile1</button></router-link
       >
       <div class="aco-options">
-        <div class="flex grayscale">
+        <div class="flex" v-for="item in items" :key="item.name" v-bind:class="{ grayscale:item.on }" @click="toggle(item)">
           <img src="../assets/logo.png" />
-          <span>Stripe</span>
-        </div>
-        <div class="flex grayscale">
-          <img src="../assets/logo.png" />
-          <span>Stripe</span>
-        </div>
-        <div class="flex grayscale">
-          <img src="../assets/logo.png" />
-          <span>Stripe</span>
-        </div>
-        <div class="flex grayscale">
-          <img src="../assets/logo.png" />
-          <span>Stripe</span>
-        </div>
-        <div class="flex grayscale">
-          <img src="../assets/logo.png" />
-          <span>Stripe</span>
-        </div>
-        <div class="flex grayscale">
-          <img src="../assets/logo.png" />
-          <span>Stripe</span>
-        </div>
-        <div class="flex grayscale">
-          <img src="../assets/logo.png" />
-          <span>Stripe</span>
-        </div>
-        <div class="flex grayscale">
-          <img src="../assets/logo.png" />
-          <span>Stripe</span>
+          <span>{{item.name}}</span>
         </div>
       </div>
     </div>
@@ -55,6 +27,37 @@ export default {
     Header,
     Footer,
   },
+  data() {
+      return {
+          items: [
+              {
+                  name: "Stripe",
+                  on: false,
+                  img: ""
+              },
+              {
+                  name: "Amazon",
+                  on: false,
+                  img: ""
+              },
+              {
+                  name: "Adidas",
+                  on: false,
+                  img: ""
+              },
+              {
+                  name: "Nike",
+                  on: false,
+                  img: ""
+              },
+          ]
+      }
+  },
+  methods: {
+      toggle: function(item) {
+          item.on = !item.on
+      }
+  }
 };
 </script>
 
