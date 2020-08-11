@@ -7,7 +7,7 @@
       >
       <div class="aco-options">
         <div class="flex" v-for="item in items" :key="item.name" v-bind:class="{ grayscale:item.on }" @click="toggle(item)">
-          <img src="../assets/logo.png" />
+          <img :src="item.img" />
           <span>{{item.name}}</span>
         </div>
       </div>
@@ -33,22 +33,22 @@ export default {
               {
                   name: "Stripe",
                   on: false,
-                  img: ""
+                  img: "img/logo.png"
               },
               {
                   name: "Amazon",
                   on: false,
-                  img: ""
+                  img: "img/logo.png"
               },
               {
                   name: "Adidas",
                   on: false,
-                  img: ""
+                  img: "img/logo.png"
               },
               {
                   name: "Nike",
                   on: false,
-                  img: ""
+                  img: "img/logo.png"
               },
           ]
       }
@@ -85,7 +85,8 @@ footer {
   grid-column: 2/4;
   display: grid;
   grid-template-columns: auto auto;
-  row-gap: 10px;
+  grid-template-rows: repeat(6, 1fr);
+  row-gap: 5px;
 }
 .aco-options img {
   border-radius: 100%;

@@ -25,9 +25,9 @@
           </label>
           <span>Bots</span>
         </div>
-        <button v-bind:class="{ off: bots }" :disabled="bots == true">
+        <router-link to="sitescripts/bots"><button v-bind:class="{ off: bots }" :disabled="bots == true">
           Options
-        </button>
+        </button></router-link>
       </div>
       <div class="misc">
         <div class="special-remover">
@@ -37,9 +37,9 @@
           </label>
           <span>Misc</span>
         </div>
-        <button v-bind:class="{ off: misc }" :disabled="misc == true">
+        <router-link to="sitescripts/misc"><button v-bind:class="{ off: misc }" :disabled="misc == true">
           Options
-        </button>
+        </button></router-link>
       </div>
       <div class="diy">
         <div class="special-remover">

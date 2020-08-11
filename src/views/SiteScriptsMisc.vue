@@ -18,7 +18,7 @@ import HeaderBack from "../components/header-back/HeaderBack";
 import Footer from "../components/footer/Footer";
 
 export default {
-  name: "SiteScriptsGroups",
+  name: "SiteScriptsMisc",
   components: {
     HeaderBack,
     Footer,
@@ -27,13 +27,13 @@ export default {
       return {
           items: [
               {
-                  name: "AMNotify"
+                  name: "Misc1"
               },
               {
-                  name: "Bot1"
+                  name: "Misc3"
               },
               {
-                  name: "Bot2"
+                  name: "Misc2"
               }
           ]
       }

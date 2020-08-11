@@ -39,7 +39,7 @@ export default {
           key: 0
       }
   },
-  created: () => {
+  created: function() {
       this.key++
   }
 };

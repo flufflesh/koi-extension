@@ -4,8 +4,8 @@
     <div class="container">
       <h2>Profiles</h2>
       <div class="profiles">
-        <div class="profile">
-          <button class="profile1">Profile 1</button>
+        <div class="profile" v-for="item in items" :key="item.name">
+          <button class="profile1">{{item.name}}</button>
           <button class="edit">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384">
               <defs />
@@ -43,6 +43,18 @@ export default {
     HeaderBack,
     Footer,
   },
+  data() {
+      return {
+          items: [
+              {
+                  name: "profile1"
+              },
+              {
+                  name: "profile2"
+              }
+          ]
+      }
+  }
 };
 </script>
 
@@ -93,8 +105,8 @@ svg {
   grid-column: 2/4;
 }
 button {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 40px;
   width: 100%;
   border: 0;

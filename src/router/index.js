@@ -55,6 +55,16 @@ const routes = [
     name: "SiteScriptsGroups",
     component: () => import("../views/SiteScriptsGroups.vue"),
   },
+  {
+    path: "/sitescripts/bots",
+    name: "SiteScriptsBots",
+    component: () => import("../views/SiteScriptsBots.vue"),
+  },
+  {
+    path: "/sitescripts/misc",
+    name: "SiteScriptsMisc",
+    component: () => import("../views/SiteScriptsMisc.vue"),
+  },
 ];
 
 const router = new VueRouter({
